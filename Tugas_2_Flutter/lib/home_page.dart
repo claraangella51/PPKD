@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       // Soal Nomor 1
       appBar: AppBar(
-        backgroundColor: Colors.orangeAccent,
+        backgroundColor: Colors.amberAccent,
         title: Text('Founder of Fix It'),
         centerTitle: true,
       ),
