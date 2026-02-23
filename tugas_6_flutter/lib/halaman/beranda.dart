@@ -422,9 +422,13 @@ class _HomePageState extends State<Beranda> {
                 ],
               ),
             ),
+
             Padding(
-              padding: EdgeInsetsGeometry.only(left: 32, right: 32, top: 4),
+              padding: const EdgeInsets.only(top: 16, left: 32),
+
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     'Layanan',
@@ -433,7 +437,6 @@ class _HomePageState extends State<Beranda> {
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                  GridView.count(crossAxisCount: 2),
                 ],
               ),
             ),
