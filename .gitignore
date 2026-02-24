@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Miscellaneous
 *.class
 *.log
@@ -43,3 +44,23 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+=======
+# Flutter/Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+pubspec.lock
+
+# Build
+build/
+ios/Pods/
+android/.gradle/
+android/app/build/
+
+# System files
+.DS_Store
+.idea/
+*.iml
+
+>>>>>>> 0aa6a0ebe913c0dda999b118d91a2d6d3f8f8e01

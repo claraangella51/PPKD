@@ -27,7 +27,7 @@ class _BerandaState extends State<Beranda> {
                   Icon(Icons.check),
                   Text('Bottom Nav Bar'),
                   Icon(Icons.check),
-                  Text('Inout Widget'),
+                  Text('Input Widget'),
                 ],
               ),
             ],
