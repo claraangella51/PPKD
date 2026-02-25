@@ -36,7 +36,7 @@ class _BottomnavbardemoState extends State<Bottomnavbardemo> {
             backgroundColor: Colors.green,
           ),
         ],
-        selectedItemColor: Colors.black,
+        selectedItemColor: Colors.grey,
         selectedIconTheme: IconThemeData(color: Colors.green),
         currentIndex: _currentIndex,
         onTap: ontapItem,
