@@ -10,12 +10,25 @@ class ModelDay14 extends StatefulWidget {
 }
 
 class _ModelDay14State extends State<ModelDay14> {
+  List<Welcome> tarotList = [];
+
+  @override
+  void initState() {
+    super.initState();
+    loadData();
+  }
+
+  Future<void> loadData() async {
+    tarotList = await loadTarot();
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: welcomeList.length,
+      itemCount: tarotList.length,
       itemBuilder: (context, index) {
-        final card = welcomeList[index];
+        final card = tarotList[index];
 
         return ListTile(
           leading: Image.asset("assets/cards/${card.img}"),
