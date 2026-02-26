@@ -15,6 +15,11 @@ class _DaftarDay15State extends State<DaftarDay15> {
   final TextEditingController nameController = TextEditingController();
   final TextEditingController cityController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
+  bool isVisibility = false;
+  void visibilityOnOff() {
+    isVisibility = !isVisibility;
+    setState(() {});
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -146,6 +151,7 @@ class _DaftarDay15State extends State<DaftarDay15> {
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
               ),
               TextFormField(
+                obscureText: isVisibility,
                 cursorColor: Colors.white,
                 style: TextStyle(color: Colors.white),
                 decoration: InputDecoration(
@@ -158,6 +164,13 @@ class _DaftarDay15State extends State<DaftarDay15> {
                   hintText: "password",
                   hintStyle: TextStyle(color: Colors.white54),
                   prefixIcon: Icon(Icons.password, color: Colors.white),
+                  suffixIcon: InkWell(
+                    onTap: visibilityOnOff,
+                    child: Icon(
+                      isVisibility ? Icons.visibility : Icons.visibility_off,
+                      color: Colors.white,
+                    ),
+                  ),
                 ),
                 controller: passwordController,
                 validator: (value) {
