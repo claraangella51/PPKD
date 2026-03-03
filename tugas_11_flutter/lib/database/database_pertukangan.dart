@@ -41,4 +41,22 @@ class DBHelper {
     final res = await db.query("pemesanan");
     return res.map((e) => PemesananModel.fromMap(e)).toList();
   }
+
+  Future<int> updatePemesanan(PemesananModel pemesanan) async {
+    final dbs = await database;
+    if (pemesanan.id == null) {
+      throw Exception("ID wajib ada");
+    }
+    return dbs.update(
+      'pemesanan',
+      pemesanan.toMap(),
+      where: 'id = ?',
+      whereArgs: [pemesanan.id],
+    );
+  }
+
+  Future<int> deletePemesanan(int id) async {
+    final dbs = await database;
+    return await dbs.delete('pemesanan', where: 'id = ?', whereArgs: [id]);
+  }
 }
