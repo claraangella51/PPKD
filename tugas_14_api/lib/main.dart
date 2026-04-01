@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tugas_14_api/views/char.dart';
+import 'package:tugas_14_api/views/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -130,7 +130,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Attack on Titan Archive',
       theme: baseTheme,
-      home: const GetCharAOT(),
+      home: const SplashScreen(),
     );
   }
 }
